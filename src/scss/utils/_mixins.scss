@@ -1,0 +1,7 @@
+@use "../base/variables" as v;
+
+@mixin transition($props) {
+  transition-property: $props;
+  transition-duration: v.$duration;
+  transition-timing-function: v.$timing-function;
+}

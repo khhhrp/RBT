@@ -1,0 +1,13 @@
+@use "./variables" as v;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: v.$main-font;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: v.$dark;
+  color: v.$light;
+}

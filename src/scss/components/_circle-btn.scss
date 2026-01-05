@@ -1,0 +1,55 @@
+@use "../base/variables" as v;
+@use "../utils/placeholders";
+@use "../utils/mixins" as m;
+
+.circle-btn {
+  @extend %outline-focus;
+  @include m.transition((color, outline-color));
+  $root: &;
+  font-family: v.$accent-font;
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 1rem;
+  min-width: 17rem;
+  height: 5rem;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: v.$light;
+
+  &__circle {
+    @include m.transition(translate);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+  }
+
+  &__text {
+    padding-left: 1.6rem;
+    padding-bottom: 0.6rem;
+    mix-blend-mode: difference;
+  }
+
+  &__img {
+    padding-bottom: 0.6rem;
+  }
+
+  @media (hover: hover) {
+    cursor: pointer;
+
+    &:hover {
+      color: v.$accent-color;
+
+      #{$root} {
+        &__circle {
+          translate: 25% 10%;
+        }
+      }
+    }
+  }
+}

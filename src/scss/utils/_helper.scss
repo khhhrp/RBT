@@ -1,0 +1,42 @@
+@use "../base/variables" as v;
+
+$icon-sizes: 20, 21, 24, 32, 50;
+$circle-sizes: 12, 15, 16, 40, 50, 80, 110;
+
+.icon {
+  display: inline-block;
+  aspect-ratio: 1;
+
+  @each $s in $icon-sizes {
+    &--#{$s} {
+      width: #{$s}px;
+    }
+  }
+}
+
+.circle {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: v.$accent-color;
+  flex-shrink: 0;
+
+  @each $s in $circle-sizes {
+    &--#{$s} {
+      width: #{$s}px;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

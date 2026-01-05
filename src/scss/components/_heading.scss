@@ -1,0 +1,23 @@
+@use "../base/variables" as v;
+@use "../base/typography";
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+
+  &__text {
+    font-family: v.$main-font;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: v.$light;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @extend %title;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+}

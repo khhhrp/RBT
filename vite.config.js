@@ -2,13 +2,13 @@ import { defineConfig } from "vite";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
-import { createHtmlPlugin } from "vite-plugin-html";
+import handlebars from "vite-plugin-handlebars";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const getHtmlInputs = () => {
   const files = fs
-    .readdirSync(__dirname)
+    .readdirSync(__dirname) // ищем .html в корне проекта
     .filter((file) => file.endsWith(".html"));
   return files.reduce((inputs, file) => {
     const key = file.replace(/\.html$/, "");
@@ -21,8 +21,8 @@ export default defineConfig({
   root: __dirname,
   base: "./",
   plugins: [
-    createHtmlPlugin({
-      minify: true,
+    handlebars({
+      partialDirectory: resolve(__dirname, "src/partials"),
     }),
   ],
   css: {

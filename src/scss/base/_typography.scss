@@ -1,0 +1,25 @@
+@use "./variables" as v;
+
+%title {
+  font-family: v.$accent-font;
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  color: v.$light;
+
+  &--large {
+    font-size: 4.5rem;
+  }
+}
+
+// %text-accent {
+//   font-family: v.$accent-font;
+//   font-size: 1.3rem;
+//   color: v.$light;
+// }
+
+// %text-main {
+//   font-family: v.$main-font;
+//   font-size: 1.3rem;
+//   font-weight: 300;
+//   color: v.$light;
+// }

@@ -1,0 +1,37 @@
+@use "../base/variables" as v;
+@use "../utils/placeholders";
+@use "../utils/mixins" as m;
+
+.main-btn {
+  @extend %outline-focus;
+  @include m.transition(
+    (border-color, background-color, translate, outline-color)
+  );
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: center;
+  font-family: v.$main-font;
+  font-weight: 500;
+  font-size: 1.6rem;
+  height: 45px;
+  min-width: 17rem;
+  color: v.$light;
+  background-color: transparent;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: rgba(v.$light, 0.5);
+
+  @media (hover: hover) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(v.$light, 0.1);
+      border-color: v.$light;
+    }
+  }
+
+  &:active {
+    translate: 0 0.5rem;
+  }
+}

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.scss" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script type="module" src="./src/js/main.js" defer></script>
-  </body>
+{{> head title="RBT" }}
+
+<body>
+
+  {{> svg-sprite }}
+  {{> header }}
+  {{> heading text="информация" title="ПРОЭКТЫ" }}
+  <button type="button" class="main-btn">Связаться с нами</button>
+  {{> circle-btn text="Связаться с нами"}}
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+
 </html>

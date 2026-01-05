@@ -1,0 +1,18 @@
+//base
+@use "./scss/base/custom-reset";
+@use "./scss/base/variables";
+@use "./scss/base/typography";
+@use "./scss/base/generals";
+
+//layouts
+@use "./scss/layouts/header";
+
+//components
+@use "./scss/components/heading";
+@use "./scss/components/main-btn";
+@use "./scss/components/circle-btn";
+
+//utils
+@use "./scss/utils/helper";
+@use "./scss/utils/mixins";
+@use "./scss/utils/placeholders";

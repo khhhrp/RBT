@@ -1,0 +1,11 @@
+@use "../base/variables" as v;
+
+%outline-focus {
+  outline-width: 0.1rem;
+  outline-style: solid;
+  outline-color: transparent;
+
+  &:focus-visible {
+    outline-color: v.$accent-color;
+  }
+}
